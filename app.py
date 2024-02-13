@@ -99,6 +99,11 @@ def main():
                 # create conversation chain
                 st.session_state.conversation = get_conversation_chain(
                     vectorstore)
+                
+        st.divider()
+        st.subheader("⚠️DISCLAIMER")
+        st.write("Please be advised that this website utilizes the OpenAI API to provide certain functionalities.")
+        st.write("Users are cautioned against uploading or inputting any business-sensitive or personally sensitive material through this platform.")
 
     # Show chat input only if conversation has been initialized
     if st.session_state.conversation is not None:
